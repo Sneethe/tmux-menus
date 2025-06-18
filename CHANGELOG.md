@@ -4,6 +4,18 @@ All notable changes to this project will be documented here.
 
 ---
 
+## [Unreleased]
+
+### Added
+
+- TPM (Plugins) menu in main, uses tpm to list, install, update and cleanup plugins
+
+### Changed
+
+- fixed spelling: display_formated_message() -> display_formatted_message()
+
+---
+
 ## [2.2.14] - 2025-06-11
 
 ### Changed

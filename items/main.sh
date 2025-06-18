@@ -33,6 +33,7 @@ static_content() {
         0.0 M P "handling Pane      $nav_next" panes.sh \
         0.0 M W "handling Window    $nav_next" windows.sh \
         0.0 M S "handling Sessions  $nav_next" sessions.sh \
+        1.8 M T "TPM (Plugins)      $nav_next" tpm.sh \
         0.0 M B "paste Buffers      $nav_next" paste_buffers.sh \
         2.0 M M "Missing keys       $nav_next" "$d_odd_chars"/missing_keys.sh \
         0.0 M A "Advanced options   $nav_next" advanced.sh \
@@ -52,7 +53,6 @@ static_content() {
             "$d_hints/customize-mode.sh $0"
     }
     set -- "$@" \
-        1.8 E p "Plugins inventory" "$D_TM_BASE_PATH"/tools/plugins.sh \
         0.0 C r "Reload tmux conf" "$rld_cmd" \
         0.0 C d 'Detach from tmux' detach-client \
         0.0 S \

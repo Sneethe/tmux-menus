@@ -48,7 +48,7 @@ bind_plugin_key() {
         msg+="  tools/show_config.sh will display current settings.\n\n"
         msg+="To avoid seeing this message again - do:\n"
         msg+="  touch $f_skip_low_tmux_version_warning"
-        display_formated_message "$msg"
+        display_formatted_message "$msg"
     }
 
     # shellcheck disable=SC2154 # defined in helpers_minimal.sh

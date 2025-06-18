@@ -13,7 +13,7 @@ static_content() {
     set -- \
         0.0 M Left "Back to Main menu  $nav_home" main.sh
     menu_generate_part 1 "$@"
-    $cfg_display_cmds && display_commands_togglep 2
+    $cfg_display_cmds && display_commands_toggle 2
 
     set -- \
         0.0 S \

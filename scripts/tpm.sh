@@ -36,17 +36,17 @@ cmd="$1"
 case "$cmd" in
     install)
 	display_message "Will install all defined plugins" no_hold
-	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bin/install_plugins)"
+	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bindings/install_plugins)"
 	display_message "$output"
 	;;
     update)
 	display_message "Will update all installed plugins" no_hold
-	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bin/update_plugins all)"
+	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bindings/update_plugins all)"
 	display_message "$output"
 	;;
     clean)
 	display_message "Will remove all undefined plugins" no_hold
-	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bin/clean_plugins)"
+	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bindings/clean_plugins)"
 	if [ -n "$output" ]; then
 	    display_message "$output"
 	else

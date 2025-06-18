@@ -40,7 +40,7 @@ case "$cmd" in
 	display_message "$output"
 	;;
     update)
-	display_message "Will update all defined plugins" no_hold
+	display_message "Will update all installed plugins" no_hold
 	output="$("$TMUX_PLUGIN_MANAGER_PATH"/tpm/bin/update_plugins all)"
 	display_message "$output"
 	;;
@@ -50,7 +50,7 @@ case "$cmd" in
 	if [ -n "$output" ]; then
 	    display_message "$output"
 	else
-	    display_message "$rn_current_script - Nothing was removed"
+	    display_message "$rn_current_script - No unused plugins found"
 	fi
 	;;
     *) error_msg "$rn_current_script - valid options: install update clean" ;;

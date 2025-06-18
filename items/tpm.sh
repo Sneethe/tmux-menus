@@ -18,9 +18,9 @@ static_content() {
     set -- \
         0.0 S \
 	1.8 E p "Plugins inventory" "$D_TM_BASE_PATH/tools/plugins.sh" \
-	1.8 E i "Install all plugins" "$d_scripts/tpm.sh install" \
-	1.8 E u "Update all plugins " "$d_scripts/tpm.sh update" \
-	1.8 E c "Cleanup plugins    " "$d_scripts/tpm.sh clean"
+	1.8 E i "Install all defined plugins " "$d_scripts/tpm.sh install" \
+	1.8 E u "Update all installed plugins" "$d_scripts/tpm.sh update" \
+	1.8 E r "Remove un-used plugins      " "$d_scripts/tpm.sh clean"
     menu_generate_part 3 "$@"
 }
 

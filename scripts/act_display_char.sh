@@ -39,7 +39,6 @@ display_char() {
         fi
         tmux_error_handler set-buffer "$c"
     else
-        # $TMUX_BIN send-keys $c
         tmux_error_handler send-keys "$c"
     fi
 }
@@ -56,23 +55,18 @@ handle_char() {
     case "$s_in" in
     0x*)
         # handle it as a hex code
-
-        # s_in="0xC3"
-
-        # Strip the '0x' and convert hex to raw byte using `printf`
-        # hex="${s_in#0x}"
-
-        # Safely print the byte without using variable in format string
-        # SC2059-safe, since format is a literal and argument is a variable
-        # s=$(printf "%b" "$(printf '\\%03o' "0x$hex")")
-        s=$(printf "%b" "$(printf '\\%03o' "$s_in")")
-
-        # s="$(printf "\\$(printf "%o" "0x${s_in#0x}")")"
+        s=$(printf "\\x%s" "${s_in#0x}")
         ;;
     *) s="$s_in" ;;
     esac
     display_char "$s"
 }
+
+
+        # Safely print the byte without using variable in format string
+        # SC2059-safe, since format is a literal and argument is a variable
+        # s=$(printf "%b" "$(printf '\\%03o' "0x$hex")")
+        # s=$(printf "%b" "$(printf '\\%03o' "$s_in")")
 
 #===============================================================
 #
